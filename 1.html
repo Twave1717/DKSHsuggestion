@@ -1,28 +1,103 @@
 <!doctype html>
 <html>
-
 <head>
-<title> DKSH 1학년 1반 소리함 </title>
-<meta charset="utf-8">
+  <title> DKSH 1학년 1반 소리함 </title>
+  <meta charset="utf-8">
+  <style>
+    body{
+      margin: 10px;
+      background-color: aliceblue;
+    }
+    h1 {
+      font-size: 25px;
+      margin:0;
+      padding:10px;
+      border-bottom: 1px solid navy;
+      text-align: center;
+    }
+    #hrefSchool, #hrefSuggestion {
+      font-size: 13px;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid navy;
+      text-align: center;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    a {
+      color:teal;
+      text-decoration:none;
+    }
+    #titleDKSH{
+      color:navy;
+    }
+    #night_day{
+      float: right;
+      background-color: gray;
+      border: none;
+      color: aliceblue;
+      padding: 10px 27px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 6px;
+      border-radius: 13px;
+      outline: none;
+    }
+    #underSign{
+      font-size: 5px;
+      color: gray;
+      text-align: right;
+      margin-top: 100px;
+    }
+    @media(max-width:430px){
+      #grid {
+        display: block;
+      }
+    }
+    </style>
 </head>
 
 <body>
+  <h1><a href="https://twave1717.github.io/DKSHsuggestion/1.html">
+    <span id="titleDKSH">DKSH<br>1학년 1반 소리함</span></a></h1>
+    <div id="grid">
+      <a href="http://dankook.sen.hs.kr/index.do"
+        target="_blank" title="단대소고">
+        <p id="hrefSchool"> DKSH홈페이지 가기</p></a></li>
+      <a href="http://naver.me/GwapjsHm"
+        target="_blank" title="DKSH 1-1 소리함">
+        <p id="hrefSuggestion"> 소리함에 의견 넣으러 가기</p></a></li>
+      </div>
+        <!-- images -->
+        <!--</ol>
+      <a href="http://naver.me/GwapjsHm"
+         target="_blank" title="DKSH 1-1 소리함">
+          <img src="소리함.jpg" width = "50%" height="50%"></a>
 
-<h1>DKSH 1학년 1반 소리함</h1>
-  <ol>
-    <li><a href="http://dankook.sen.hs.kr/index.do"
-      target="_blank" title="단대소고">DKSH홈페이지 가기</a></li>
-    <li><a href="http://naver.me/GwapjsHm"
-      target="_blank" title="DKSH 1-1 소리함">소리함에 의견 넣으러 가기</a></li>
-  </ol>
-  <a href="http://naver.me/GwapjsHm"
-     target="_blank" title="DKSH 1-1 소리함">
-      <img src="소리함.jpg" width = "50%" height="50%"></a>
+      <a href="http://dankook.sen.hs.kr/index.do"
+          target="_blank" title="단대소고">
+            <img src="DKSH.jpg" width = "50%" height="50%"></a>
+          -->
+  <input id="night_day" type="button" value="night" onclick="
+    if(this.value === 'night'){
+      document.querySelector('body').style.backgroundColor = 'lightslategray';
+      document.querySelector('#titleDKSH').style.color = 'skyblue';
+      document.querySelector('h1').style.borderBottomColor = 'skyblue';
+      document.querySelector('#hrefSchool').style.borderColor = 'skyblue';
+      document.querySelector('#hrefSuggestion').style.borderColor = 'skyblue';
+      this.value = ' day ';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'aliceblue';
+      document.querySelector('#titleDKSH').style.color = 'navy';
+      document.querySelector('h1').style.borderBottomColor = 'navy';
+      document.querySelector('#hrefSchool').style.borderColor = 'navy';
+      document.querySelector('#hrefSuggestion').style.borderColor = 'navy';
+      this.value = 'night';
+    }
+  ">
+  <p id="underSign">업데이트 중입니다</p>
 
-  <a href="http://dankook.sen.hs.kr/index.do"
-      target="_blank" title="단대소고">
-      <img src="DKSH.jpg" width = "50%" height="50%"></a>
-
-</body>
-
+  </body>
 </html>
